@@ -18,7 +18,6 @@ class Force_SSO {
 
 		add_filter( 'jetpack_active_modules', array( $force_sso, 'activate_sso' ) );
 		add_action( 'jetpack_module_loaded_sso', array( $force_sso, 'sso_loaded' ) );
-		add_action( 'jetpack_sso_pre_handle_login', array( $force_sso, 'pre_login' ) );
 
 		if ( true === defined( 'TO51_JETPACK_FORCE_SSO_DISABLE_CONNECTION' ) ) {
 			add_filter( 'jetpack_is_connection_ready', '__return_false' );
