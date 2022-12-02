@@ -22,7 +22,7 @@ namespace To51\Plugin\Jetpack_Force_SSO;
 defined( 'ABSPATH' ) || exit; // @phpstan-ignore-line
 
 define( 'TO51_JETPACK_FORCE_SSO_PLUGIN', 'to51-jetpack-force-sso' );
-define( 'TO51_JETPACK_FORCE_SSO_VERSION', '1.0.1' );
+define( 'TO51_JETPACK_FORCE_SSO_VERSION', '1.0.2' );
 
 define( 'TO51_JETPACK_FORCE_SSO_PLUGIN_DIR', dirname( __FILE__ ) . DIRECTORY_SEPARATOR );
 define( 'TO51_JETPACK_FORCE_SSO_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
