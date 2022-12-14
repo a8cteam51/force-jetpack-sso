@@ -16,6 +16,11 @@ class Force_SSO {
 
 		$force_sso = new static();
 
+		// Bail if it is a staging, development or local site (only force SSO on producion sites).
+		if ( 'production' !== wp_get_environment_type() ) {
+			return;
+		}
+
 		add_filter( 'jetpack_active_modules', array( $force_sso, 'activate_sso' ) );
 		add_action( 'jetpack_module_loaded_sso', array( $force_sso, 'sso_loaded' ) );
 
