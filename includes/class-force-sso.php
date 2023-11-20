@@ -16,11 +16,6 @@ class Force_SSO {
 
 		$force_sso = new static();
 
-		// Bail if it is a staging, development or local site (only force SSO on producion sites).
-		if ( 'production' !== wp_get_environment_type() ) {
-			return;
-		}
-
 		add_filter( 'jetpack_active_modules', array( $force_sso, 'activate_sso' ) );
 		add_action( 'jetpack_module_loaded_sso', array( $force_sso, 'sso_loaded' ) );
 
@@ -37,8 +32,20 @@ class Force_SSO {
 	 * @return array
 	 */
 	public function activate_sso( array $modules ): array {
-		if ( false === array_search( 'sso', $modules, true ) ) {
-			$modules[] = 'sso';
+		$environment_type = wp_get_environment_type();
+
+		// Check if the 'sso' module should be enabled or disabled based on the environment type.
+		if ( 'production' === $environment_type ) {
+			// Add 'sso' module if it's not already enabled.
+			if ( false === array_search( 'sso', $modules, true ) ) {
+				$modules[] = 'sso';
+			}
+		} else {
+			// Disable 'sso' module if it's enabled on a non-production site.
+			$index = array_search( 'sso', $modules, true );
+			if ( false !== $index ) {
+				unset( $modules[ $index ] );
+			}
 		}
 
 		return $modules;

@@ -5,7 +5,7 @@
  * Force "Allow users to log in to this site using WordPress.com accounts".
  * Force "Match accounts using email addresses".
  * Force "Require accounts to use WordPress.com Two-Step Authentication".
- * Version:     1.0.2
+ * Version:     1.0.3
  * Author:      WordPress.com Special Projects Team
  * Author URI:  https://wpspecialprojects.wordpress.com
  * Text Domain: to51-jetpack-force-sso
