@@ -1,9 +1,22 @@
-# team51-force-jetpack-sso
+# Force Jetpack SSO
 
-This repo is for team51-force-jetpack-sso, powered by WordPress.
+This plugin automatically enables [Jetpack's "WordPress.com Secure Sign On" module](https://jetpack.com/support/sso/) in production sites.
 
-## Project Structure
+SSO will automatically be disabled on non-production sites (when the [wp_get_environment_type()](https://developer.wordpress.org/reference/functions/wp_get_environment_type/) function returns anything different than `production`).
 
-Should not be added to sites with a membership or forum component. Reference: https://to51.wordpress.com/2022/09/21/jetpack-sso-task-force/#when-to-not-us-it
+## Usage
 
-For example emails to send partner explaining SSO, see "email templates" here: https://to51.wordpress.com/2022/09/21/jetpack-sso-task-force/
+1. Download the .zip file from https://github.com/a8cteam51/team51-force-jetpack-sso/releases
+2. Via the wp-admin plugins page on your WordPress site, upload the zip file and activate the plugin
+
+### Updates
+
+This plugin will get automatically updated when a new version is released in https://github.com/a8cteam51/team51-force-jetpack-sso/releases.
+
+## Support
+
+**This plugin is unsupported; use at your own discretion**
+
+If you have a problem or suggestion, please make an issue in the repo here: https://github.com/a8cteam51/plugin-autoupdate-filter/issues
+
+Feel free to fork and/or create a PR!
