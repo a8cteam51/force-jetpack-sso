@@ -20,3 +20,7 @@ This plugin will get automatically updated when a new version is released in htt
 If you have a problem or suggestion, please make an issue in the repo here: https://github.com/a8cteam51/plugin-autoupdate-filter/issues
 
 Feel free to fork and/or create a PR!
+
+### Compatibility
+
+Installing this plugin on sites with a **membership**, **forum** or any other components **requiring a user log in** isn't recommended, as Jetpack SSO can interfere with their functionality.
