@@ -5,7 +5,7 @@
  * Force "Allow users to log in to this site using WordPress.com accounts".
  * Force "Match accounts using email addresses".
  * Force "Require accounts to use WordPress.com Two-Step Authentication".
- * Version:     1.0.4
+ * Version:     1.0.5
  * Author:      WordPress.com Special Projects Team
  * Author URI:  https://wpspecialprojects.wordpress.com
  * Text Domain: jetpack-force-sso
@@ -22,7 +22,7 @@ namespace To51\Plugin\Jetpack_Force_SSO;
 defined( 'ABSPATH' ) || exit; // @phpstan-ignore-line
 
 define( 'TO51_JETPACK_FORCE_SSO_PLUGIN', 'jetpack-force-sso' );
-define( 'TO51_JETPACK_FORCE_SSO_VERSION', '1.0.4' );
+define( 'TO51_JETPACK_FORCE_SSO_VERSION', '1.0.5' );
 
 define( 'TO51_JETPACK_FORCE_SSO_PLUGIN_DIR', dirname( __FILE__ ) . DIRECTORY_SEPARATOR );
 define( 'TO51_JETPACK_FORCE_SSO_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
