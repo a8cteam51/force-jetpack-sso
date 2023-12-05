@@ -80,7 +80,7 @@ class Force_SSO {
 	 */
 	public function self_update( $update, array $plugin_data, string $plugin_file, $locales ) {
 		// only check this plugin
-		if ( 'team51-force-jetpack-sso/to51-jetpack-force-sso.php' !== $plugin_file ) {
+		if ( 'force-jetpack-sso/jetpack-force-sso.php' !== $plugin_file ) {
 			return $update;
 		}
 
