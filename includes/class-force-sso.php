@@ -91,7 +91,7 @@ class Force_SSO {
 
 		// let's go get the latest version number from GitHub
 		$response = wp_remote_get(
-			'https://github.com/a8cteam51/team51-force-jetpack-sso/releases/latest',
+			'https://github.com/a8cteam51/force-jetpack-sso/releases/latest',
 			array(
 				'user-agent' => 'wpspecialprojects',
 			)
