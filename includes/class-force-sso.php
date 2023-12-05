@@ -18,6 +18,7 @@ class Force_SSO {
 
 		add_filter( 'jetpack_active_modules', array( $force_sso, 'activate_sso' ) );
 		add_action( 'jetpack_module_loaded_sso', array( $force_sso, 'sso_loaded' ) );
+		add_filter( 'update_plugins_github.com', array( $this, 'self_update' ), 10, 4 );
 
 		if ( true === defined( 'TO51_JETPACK_FORCE_SSO_DISABLE_CONNECTION' ) ) {
 			add_filter( 'jetpack_is_connection_ready', '__return_false' );
@@ -65,5 +66,58 @@ class Force_SSO {
 		add_filter( 'jetpack_remove_login_form', '__return_true' );
 		// To force 2FA for wordpress.com user login.
 		add_filter( 'jetpack_sso_require_two_step', '__return_true' );
+	}
+
+	/**
+	 * Check for updates to this plugin
+	 *
+	 * @param array  $update   Array of update data.
+	 * @param array  $plugin_data Array of plugin data.
+	 * @param string $plugin_file Path to plugin file.
+	 * @param string $locales    Locale code.
+	 *
+	 * @return array|bool Array of update data or false if no update available.
+	 */
+	public function self_update( $update, array $plugin_data, string $plugin_file, $locales ) {
+		// only check this plugin
+		if ( 'team51-force-jetpack-sso/to51-jetpack-force-sso.php' !== $plugin_file ) {
+			return $update;
+		}
+
+		// already completed update check elsewhere
+		if ( ! empty( $update ) ) {
+			return $update;
+		}
+
+		// let's go get the latest version number from GitHub
+		$response = wp_remote_get(
+			'https://github.com/a8cteam51/team51-force-jetpack-sso/releases/latest',
+			array(
+				'user-agent' => 'wpspecialprojects',
+			)
+		);
+
+		if ( is_wp_error( $response ) ) {
+			return;
+		} else {
+			$output = json_decode( wp_remote_retrieve_body( $response ), true );
+		}
+
+		$new_version_number  = $output['tag_name'];
+		$is_update_available = version_compare( $plugin_data['Version'], $new_version_number, '<' );
+
+		if ( ! $is_update_available ) {
+			return false;
+		}
+
+		$new_url     = $output['html_url'];
+		$new_package = $output['assets'][0]['browser_download_url'];
+
+		return array(
+			'slug'    => $plugin_data['TextDomain'],
+			'version' => $new_version_number,
+			'url'     => $new_url,
+			'package' => $new_package,
+		);
 	}
 }
