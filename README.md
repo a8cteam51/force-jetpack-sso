@@ -6,18 +6,18 @@ SSO will automatically be disabled on non-production sites (when the [wp_get_env
 
 ## Usage
 
-1. Download the .zip file from https://github.com/a8cteam51/team51-force-jetpack-sso/releases
+1. Download the .zip file from https://github.com/a8cteam51/force-jetpack-sso/releases
 2. Via the wp-admin plugins page on your WordPress site, upload the zip file and activate the plugin
 
 ## Updates
 
-This plugin will get automatically updated when a new version is released in https://github.com/a8cteam51/team51-force-jetpack-sso/releases.
+This plugin will get automatically updated when a new version is released at https://github.com/a8cteam51/force-jetpack-sso/releases.
 
 ## Support
 
 **This plugin is unsupported; use at your own discretion**
 
-If you have a problem or suggestion, please make an issue in the repo here: https://github.com/a8cteam51/plugin-autoupdate-filter/issues
+If you have a problem or suggestion, please make an issue in the repo here: https://github.com/a8cteam51/force-jetpack-sso/issues
 
 Feel free to fork and/or create a PR!
 
