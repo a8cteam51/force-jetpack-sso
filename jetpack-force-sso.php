@@ -5,7 +5,7 @@
  * Force "Allow users to log in to this site using WordPress.com accounts".
  * Force "Match accounts using email addresses".
  * Force "Require accounts to use WordPress.com Two-Step Authentication".
- * Version:     1.0.5
+ * Version:     1.0.4
  * Author:      WordPress.com Special Projects Team
  * Author URI:  https://wpspecialprojects.wordpress.com
  * Update URI:  https://github.com/a8cteam51/force-jetpack-sso/
@@ -23,7 +23,7 @@ namespace WPSP\Plugin\Jetpack_Force_SSO;
 defined( 'ABSPATH' ) || exit; // @phpstan-ignore-line
 
 define( 'WPSP_JETPACK_FORCE_SSO_PLUGIN', 'jetpack-force-sso' );
-define( 'WPSP_JETPACK_FORCE_SSO_VERSION', '1.0.5' );
+define( 'WPSP_JETPACK_FORCE_SSO_VERSION', '1.0.4' );
 
 define( 'WPSP_JETPACK_FORCE_SSO_PLUGIN_DIR', dirname( __FILE__ ) . DIRECTORY_SEPARATOR );
 define( 'WPSP_JETPACK_FORCE_SSO_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
