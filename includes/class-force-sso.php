@@ -2,10 +2,10 @@
 /**
  * Extend body class.
  *
- * @package To51\Plugin\Jetpack_Force_SSO
+ * @package WPSP\Plugin\Jetpack_Force_SSO
  */
 
-namespace To51\Plugin\Jetpack_Force_SSO;
+namespace WPSP\Plugin\Jetpack_Force_SSO;
 
 use Jetpack;
 
@@ -20,7 +20,7 @@ class Force_SSO {
 		add_action( 'jetpack_module_loaded_sso', array( $force_sso, 'sso_loaded' ) );
 		add_filter( 'update_plugins_github.com', array( $force_sso, 'self_update' ), 10, 4 );
 
-		if ( true === defined( 'TO51_JETPACK_FORCE_SSO_DISABLE_CONNECTION' ) ) {
+		if ( true === defined( 'WPSP_JETPACK_FORCE_SSO_DISABLE_CONNECTION' ) ) {
 			add_filter( 'jetpack_is_connection_ready', '__return_false' );
 		}
 	}

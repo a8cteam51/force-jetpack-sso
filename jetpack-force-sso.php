@@ -14,20 +14,20 @@
  * Tested up to: 5.7
  * Requires PHP: 7.2
  *
- * @package To51\Plugin\Jetpack_Force_SSO
+ * @package WPSP\Plugin\Jetpack_Force_SSO
  */
 
-namespace To51\Plugin\Jetpack_Force_SSO;
+namespace WPSP\Plugin\Jetpack_Force_SSO;
 
 defined( 'ABSPATH' ) || exit; // @phpstan-ignore-line
 
-define( 'TO51_JETPACK_FORCE_SSO_PLUGIN', 'jetpack-force-sso' );
-define( 'TO51_JETPACK_FORCE_SSO_VERSION', '1.0.5' );
+define( 'WPSP_JETPACK_FORCE_SSO_PLUGIN', 'jetpack-force-sso' );
+define( 'WPSP_JETPACK_FORCE_SSO_VERSION', '1.0.5' );
 
-define( 'TO51_JETPACK_FORCE_SSO_PLUGIN_DIR', dirname( __FILE__ ) . DIRECTORY_SEPARATOR );
-define( 'TO51_JETPACK_FORCE_SSO_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'WPSP_JETPACK_FORCE_SSO_PLUGIN_DIR', dirname( __FILE__ ) . DIRECTORY_SEPARATOR );
+define( 'WPSP_JETPACK_FORCE_SSO_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
-require_once TO51_JETPACK_FORCE_SSO_PLUGIN_DIR . 'includes' . DIRECTORY_SEPARATOR . 'class-force-sso.php';
+require_once WPSP_JETPACK_FORCE_SSO_PLUGIN_DIR . 'includes' . DIRECTORY_SEPARATOR . 'class-force-sso.php';
 
 $jetpack_force_sso = new Force_SSO();
 
