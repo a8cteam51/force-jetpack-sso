@@ -8,6 +8,7 @@
  * Version:     1.0.5
  * Author:      WordPress.com Special Projects Team
  * Author URI:  https://wpspecialprojects.wordpress.com
+ * Update URI:  https://github.com/a8cteam51/force-jetpack-sso/
  * Text Domain: jetpack-force-sso
  * Domain Path: /languages
  * Requires at least: 5.1
