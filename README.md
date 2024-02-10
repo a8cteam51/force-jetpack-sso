@@ -1,8 +1,8 @@
 # Force Jetpack SSO
 
-This plugin automatically enables [Jetpack's "WordPress.com Secure Sign On" module](https://jetpack.com/support/sso/) in production sites.
+This plugin automatically enables [Jetpack's "WordPress.com Secure Sign On" module](https://jetpack.com/support/sso/) in production sites. [Jetpack's Two‑Step Authentication](https://jetpack.com/support/sso/#requiring-two-step-authentication) is also forced on by this plugin.
 
-SSO will automatically be disabled on non-production sites (when the [wp_get_environment_type()](https://developer.wordpress.org/reference/functions/wp_get_environment_type/) function returns anything different than `production`).
+SSO will automatically be disabled on non-production sites (when the [wp_get_environment_type()](https://developer.wordpress.org/reference/functions/wp_get_environment_type/) function returns anything different than `production`). 
 
 ## Usage
 
